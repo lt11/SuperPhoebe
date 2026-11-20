@@ -1,7 +1,7 @@
 #!/bin/bash
 
 INSTALL_PREPROCESSING=1
-SHORT=1
+SHORT=0
 
 #To install the following tools:
 #seqtk

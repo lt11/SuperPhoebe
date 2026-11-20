@@ -1,6 +1,6 @@
-# phyBWT2
+# phyBWT2 and distBWT2
 
-phyBWT2 is a new alignment-, assembly-, and reference-free method that builds a partition tree without relying on the pairwise comparison of sequences, thus avoiding to use a distance matrix to infer phylogeny.
+phyBWT2 is an alignment-, assembly-, and reference-free method that builds a cladogram without relying on the pairwise comparison of sequences, thus avoiding to use a distance matrix to infer phylogeny.
 
 It applies the properties of the Extended Burrows-Wheeler Transform (EBWT) to the idea of decomposition for phylogenetic inference. 
 In particular, it hinges the combinatorial properties of the *EBWT positional clustering* framework recently introduced , overcoming the limitations of employing *k*-mers with a priori fixed size. 
@@ -11,6 +11,8 @@ Let *S={S<sub>1</sub>,...,S<sub>n</sub>}* be the input collection of sequences, 
 - the longest common prefix array (LCP) of collection *S*;
 - the color document array (CDA) of collection *S*, obtained from the document array (DA) of collection *S*.
 
+distBWT2 exploits the data structures of phyBWT2 to produce phylogenetic trees.
+
 ### Install
 
 ```sh
@@ -19,14 +21,9 @@ cd phyBWT2
 ```
 
 ### Compile
-phyBWT2 can handle datasets of different types (short reads, long reads, contigs, or entire genomes). 
+phyBWT2 and distBWT2 can handle datasets of different types (short reads, long reads, contigs, or entire genomes). 
 
-For short reads, phyBWT2 must be compiled by using
-
-```sh
-make
-```
-while for sequences longer than 250 bp, set SHORT=0
+This implementation is meant for whole-genome assemblies, and must be compiled using:
 
 ```sh
 make SHORT=0

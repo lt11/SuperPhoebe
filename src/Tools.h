@@ -32,7 +32,7 @@
 #include "../external/tree_util.hh"
 
 #define ALF 6
-#define SIZE_BITSET 64
+#define SIZE_BITSET 128
 #define BUFFERSIZE 1048576
 
 #if SHORT
